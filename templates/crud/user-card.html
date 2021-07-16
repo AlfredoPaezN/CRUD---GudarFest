@@ -1,0 +1,20 @@
+{% load static %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card col-md-6 m-2">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src="{{ person.photo.url }}">
+                </div>
+        
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h1 class="card-title">{{ person.name }} {{ person.lastname }} </h1>
+                        <p class="card-text">{{ person.description }}</p>
+                        <a href="{% url "person_detail" person.pk %}" class="btn btn-primary">View Visitor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
